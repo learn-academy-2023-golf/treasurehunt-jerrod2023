@@ -16,7 +16,8 @@ const App = () => {
   ])
   const [treasureLocation, setTreasureLocation] = useState(Math.floor(Math.random() * board.length))
   const [bombLocation, setBombLocation] = useState(Math.floor(Math.random() * board.length))
-  const [gameWon, setgameWon] = useState(false)
+  const [gameWon, setGameWon] = useState(false)
+  const [gameLose, setGameLose] = useState(false)
 
   
 
@@ -30,7 +31,7 @@ const App = () => {
       style={{ width: '100%', height: '100%' }}
       />
       setBoard(updatedBoard)
-      setgameWon(true)
+      setGameWon(true)
 
     }else if(bombLocation === index) {
       updatedBoard[index] = <img src="https://static.tvtropes.org/pmwiki/pub/images/bender_anti_role_model.png"
@@ -38,6 +39,7 @@ const App = () => {
       style={{ width: '100%', height: '100%' }}
       />
       setBoard(updatedBoard)
+      setGameLose(true)
 
     } else {updatedBoard[index] = "🌴"
     setBoard(updatedBoard)
@@ -60,7 +62,8 @@ const App = () => {
         )
       })}
       </div>
-      {gameWon && <div className="win-message">AWESOMESAUCE! YOU WON TWO NICKLES</div>}
+      {gameWon && <div className="win-message">SHUT UP AND TAKE MY MONEY!</div>}
+      {gameLose && <div className="lose-message">HAHAHAHAHAHA</div>}
     </>
   )
 }

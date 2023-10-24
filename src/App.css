@@ -1,3 +1,8 @@
+body {
+  background-image: url('https://as2.ftcdn.net/v2/jpg/06/17/38/99/1000_F_617389901_Yyjn9LZjPdnXruTNAE3mSPST4GhdTZl3.jpg');
+  background-size: cover;
+  background-position: center;
+}
 h1 {
   text-align: center;
 }
@@ -5,7 +10,7 @@ h1 {
 .square {
   height: 200px;
   width: 200px;
-  border: 1px solid black;
+  border: 2px solid rgb(84, 4, 4);
   font-size: 150px;
   text-align: center;
 }
@@ -15,15 +20,46 @@ flex-wrap: wrap;
 width: 620px;
 margin: auto
 }
-/* .win-message {
+.win-message {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #1e21d3;
+  background-image: url('https://mystickermania.com/cdn/stickers/memes/shut-up-and-take-my-money-meme-512x512.png'); 
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
   padding: 20px;
   border: 2px solid #000;
   border-radius: 10px;
   text-align: center;
-  font-size: 6em
-} */
+  font-size: 2em;
+  width: 50%;
+  height: 50%;
+  max-width: 1500px;
+  font-size: large;
+}
+
+.lose-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('https://coolesticker.ch/wp-content/uploads/2020/06/195.png'); 
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 2em;
+  width: 50%;
+  height: 50%;
+  max-width: 1500px;
+  font-size: large;
+}

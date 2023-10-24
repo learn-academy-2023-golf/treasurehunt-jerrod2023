@@ -64,9 +64,16 @@ branch: tree-emoji
 Branch: winner-loser
 
 - As a user, I can see a message stating that I won the game by selecting the square that contains the treasure.
+Branch: youre-a-winner
+
 - As a user, I can see a message stating that I lost the game by selecting the square that contains the bomb.
 - As a user, I cannot continue to play the game after I win or lose.
+
+Branch: your-a-loser
+
 - As a user, I can see a message informing me that I lost the game when I run out of turns (the counter reaches zero).
+
+Branch: your-a-loser
 
 ### 🏔 Stretch Goals
 
