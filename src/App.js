@@ -41,10 +41,20 @@ const App = () => {
       setBoard(updatedBoard)
       setGameLose(true)
 
-    } else {updatedBoard[index] = "🌴"
+    } else {updatedBoard[index] = <img src="https://media.tenor.com/7t63GFnoIPUAAAAd/huh-cat-huh-m4rtin.gif"
+    alt="Neutral"
+    style={{ width: '100%', height: '100%' }}
+    />
     setBoard(updatedBoard)
     }
 
+  }
+  const handleReset = () => {
+    setBoard(Array(9).fill("?"))
+    setTreasureLocation(Math.floor(Math.random() * board.length))
+    setBombLocation(Math.floor(Math.random() * board.length))
+    setGameWon(false)
+    setGameLose(false)
   }
 
   return (
@@ -62,8 +72,14 @@ const App = () => {
         )
       })}
       </div>
-      {gameWon && <div className="win-message">SHUT UP AND TAKE MY MONEY!</div>}
-      {gameLose && <div className="lose-message">HAHAHAHAHAHA</div>}
+      {gameWon && (
+      <div className="win-message"><button onClick={handleReset} className="reset-button">Play Again</button>
+      </div>
+      )}
+      {gameLose && 
+      (<div className="lose-message">LOOOOSSSSEEERRRRR<button onClick={handleReset} className="reset-button">Play Again</button>
+      </div>
+      )}
     </>
   )
 }
