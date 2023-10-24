@@ -15,3 +15,15 @@ flex-wrap: wrap;
 width: 620px;
 margin: auto
 }
+/* .win-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1e21d3;
+  padding: 20px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 6em
+} */

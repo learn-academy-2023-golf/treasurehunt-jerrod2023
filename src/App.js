@@ -14,11 +14,35 @@ const App = () => {
     "?",
     "?"
   ])
+  const [treasureLocation, setTreasureLocation] = useState(Math.floor(Math.random() * board.length))
+  const [bombLocation, setBombLocation] = useState(Math.floor(Math.random() * board.length))
+  const [gameWon, setgameWon] = useState(false)
+
+  
+
   const handleGamePlay = (index) => {
     // alert(index)
+    if (gameWon) return
+
     let updatedBoard = [...board]
-    updatedBoard[index] = "🌴"
+    if(treasureLocation === index) {
+      updatedBoard[index] = <img src="https://mystickermania.com/cdn/stickers/memes/shut-up-and-take-my-money-meme-512x512.png" alt="Treasure"
+      style={{ width: '100%', height: '100%' }}
+      />
+      setBoard(updatedBoard)
+      setgameWon(true)
+
+    }else if(bombLocation === index) {
+      updatedBoard[index] = <img src="https://static.tvtropes.org/pmwiki/pub/images/bender_anti_role_model.png"
+      alt="Bomb"
+      style={{ width: '100%', height: '100%' }}
+      />
+      setBoard(updatedBoard)
+
+    } else {updatedBoard[index] = "🌴"
     setBoard(updatedBoard)
+    }
+
   }
 
   return (
@@ -36,6 +60,7 @@ const App = () => {
         )
       })}
       </div>
+      {gameWon && <div className="win-message">AWESOMESAUCE! YOU WON TWO NICKLES</div>}
     </>
   )
 }
